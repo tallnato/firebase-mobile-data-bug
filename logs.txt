@@ -1,24 +1,22 @@
-05-21 18:46:54.539 18104-18104/? I/art: Late-enabling -Xcheck:jni
-05-21 18:46:54.559 18104-18104/? D/TidaProvider: TidaProvider()
-05-21 18:46:55.199 18104-18104/example.com.firebasemobiletest D/FirebaseApp: com.google.firebase.auth.FirebaseAuth is not linked. Skipping initialization.
-    com.google.firebase.crash.FirebaseCrash is not linked. Skipping initialization.
-05-21 18:46:55.289 18104-18104/example.com.firebasemobiletest V/FA: Registered activity lifecycle callback
-05-21 18:46:55.349 18104-18104/example.com.firebasemobiletest I/FirebaseInitProvider: FirebaseApp initialization successful
-05-21 18:46:55.349 18104-18104/example.com.firebasemobiletest I/InstantRun: starting instant run server: is main process
-05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest V/FA: Collection enabled
+05-21 19:39:53.477 16308-16308/? I/zygote64: Late-enabling -Xcheck:jni
+05-21 19:39:54.167 16308-16308/example.com.firebasemobiletest D/FirebaseApp: com.google.firebase.auth.FirebaseAuth is not linked. Skipping initialization.
+05-21 19:39:54.169 16308-16308/example.com.firebasemobiletest D/FirebaseApp: com.google.firebase.crash.FirebaseCrash is not linked. Skipping initialization.
+05-21 19:39:54.247 16308-16308/example.com.firebasemobiletest V/FA: Registered activity lifecycle callback
+05-21 19:39:54.252 16308-16308/example.com.firebasemobiletest I/FirebaseInitProvider: FirebaseApp initialization successful
+05-21 19:39:54.253 16308-16308/example.com.firebasemobiletest I/InstantRun: starting instant run server: is main process
+05-21 19:39:54.276 16308-16356/example.com.firebasemobiletest V/FA: Collection enabled
     App package, google app id: example.com.firebasemobiletest, 1:794003938984:android:c5b9c7a4182573cb
-05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest I/FA: App measurement is starting up, version: 12451
+05-21 19:39:54.277 16308-16356/example.com.firebasemobiletest I/FA: App measurement is starting up, version: 12451
     To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
-    To enable faster debug mode event logging run:
+05-21 19:39:54.278 16308-16356/example.com.firebasemobiletest I/FA: To enable faster debug mode event logging run:
       adb shell setprop debug.firebase.analytics.app example.com.firebasemobiletest
-05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest D/FA: Debug-level message logging enabled
-05-21 18:46:55.459 18104-18104/example.com.firebasemobiletest W/art: Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
-05-21 18:46:55.489 18104-18104/example.com.firebasemobiletest V/FA: onActivityCreated
-05-21 18:46:55.539 18104-18144/example.com.firebasemobiletest V/FA: Connecting to remote service
-05-21 18:46:55.579 18104-18144/example.com.firebasemobiletest V/FA: Connection attempt already in progress
-05-21 18:46:55.709 18104-18231/example.com.firebasemobiletest W/ResourcesManager: Asset path '/system/framework/com.android.media.remotedisplay.jar' does not exist or contains no resources.
-    Asset path '/system/framework/com.android.location.provider.jar' does not exist or contains no resources.
-05-21 18:46:55.709 18104-18104/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [Firestore]: The behavior for java.util.Date objects stored in Firestore is going to change AND YOUR APP MAY BREAK.
+05-21 19:39:54.278 16308-16356/example.com.firebasemobiletest D/FA: Debug-level message logging enabled
+05-21 19:39:54.299 16308-16356/example.com.firebasemobiletest V/FA: Cancelling job. JobID: -1508595000
+05-21 19:39:54.301 16308-16356/example.com.firebasemobiletest V/FA: Persisting first open: 1526927994211
+05-21 19:39:54.311 16308-16356/example.com.firebasemobiletest V/FA: Updating deferred analytics collection: false
+05-21 19:39:54.349 16308-16308/example.com.firebasemobiletest V/FA: onActivityCreated
+05-21 19:39:54.403 16308-16308/example.com.firebasemobiletest E/ANDR-PERF-JNI: IPerf::tryGetService failed!
+05-21 19:39:54.531 16308-16308/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [Firestore]: The behavior for java.util.Date objects stored in Firestore is going to change AND YOUR APP MAY BREAK.
     To hide this warning and ensure your app does not break, you need to add the following code to your app before calling any other Cloud Firestore methods:
 
     FirebaseFirestore firestore = FirebaseFirestore.getInstance();
@@ -36,84 +34,90 @@
     java.util.Date date = timestamp.toDate();
 
     Please audit all existing usages of java.util.Date when you enable the new behavior. In a future release, the behavior will be changed to the new behavior, so if you do not follow these steps, YOUR APP MAY BREAK.
-05-21 18:46:55.739 18104-18231/example.com.firebasemobiletest W/linker: /data/app/com.google.android.gms-2/lib/arm64/libgmscore.so: unused DT entry: type 0x6ffffffe arg 0x1228
-    /data/app/com.google.android.gms-2/lib/arm64/libgmscore.so: unused DT entry: type 0x6fffffff arg 0x2
-05-21 18:46:55.749 18104-18231/example.com.firebasemobiletest W/linker: /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0xf arg 0x8a
-    /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0x6ffffffe arg 0x470
-    /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0x6fffffff arg 0x1
-05-21 18:46:55.749 18104-18231/example.com.firebasemobiletest V/NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 280 native methods...
-05-21 18:46:55.769 18104-18231/example.com.firebasemobiletest I/art: Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java7ExtendedSSLSession>
-    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java7ExtendedSSLSession>
-    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java8ExtendedSSLSession>
-    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java8ExtendedSSLSession>
-05-21 18:46:55.789 18104-18231/example.com.firebasemobiletest I/ProviderInstaller: Installed default security provider GmsCore_OpenSSL
-05-21 18:46:55.809 18104-18250/example.com.firebasemobiletest I/DynamiteModule: Considering local module com.google.android.gms.firebase_database:4 and remote module com.google.android.gms.firebase_database:6
+05-21 19:39:54.576 16308-16360/example.com.firebasemobiletest W/linker: "/data/app/com.google.android.gms-SEm_PVD_vMlge_bJsFB44w==/lib/arm64/libconscrypt_gmscore_jni.so" unused DT entry: type 0xf arg 0x8a
+05-21 19:39:54.578 16308-16360/example.com.firebasemobiletest V/NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 280 native methods...
+05-21 19:39:54.593 16308-16361/example.com.firebasemobiletest W/zygote64: Skipping duplicate class check due to unrecognized classloader
+05-21 19:39:54.596 16308-16361/example.com.firebasemobiletest I/DynamiteModule: Considering local module com.google.android.gms.firebase_database:4 and remote module com.google.android.gms.firebase_database:6
     Selected remote version of com.google.android.gms.firebase_database, version >= 6
-05-21 18:46:55.819 18104-18144/example.com.firebasemobiletest I/FA: Tag Manager is not found and thus will not be used
-05-21 18:46:55.839 18104-18144/example.com.firebasemobiletest D/FA: Logging event (FE): screen_view(_vs), Bundle[{firebase_event_origin(_o)=auto, firebase_screen_class(_sc)=MainActivity, firebase_screen_id(_si)=-3884067056578955392}]
-05-21 18:46:55.849 18104-18262/example.com.firebasemobiletest D/OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
-05-21 18:46:55.859 18104-18104/example.com.firebasemobiletest D/Atlas: Validating map...
-05-21 18:46:55.859 18104-18104/example.com.firebasemobiletest D/ActivityThreadInjector: clearCachedDrawables.
-05-21 18:46:55.889 18104-18144/example.com.firebasemobiletest V/FA: Connection attempt already in progress
-    Connection attempt already in progress
-05-21 18:46:55.889 18104-18144/example.com.firebasemobiletest V/FA: Activity resumed, time: 231726764
-05-21 18:46:55.899 18104-18262/example.com.firebasemobiletest I/Adreno: QUALCOMM build                   : 5a2e917, Iae42b9ed90
-    Build Date                       : 03/28/16
-    OpenGL ES Shader Compiler Version: E031.25.03.09
+05-21 19:39:54.610 16308-16362/example.com.firebasemobiletest D/OpenGLRenderer: HWUI GL Pipeline
+05-21 19:39:54.627 16308-16361/example.com.firebasemobiletest W/zygote64: Skipping duplicate class check due to unrecognized classloader
+05-21 19:39:54.664 16308-16362/example.com.firebasemobiletest I/Adreno: QUALCOMM build                   : 7f08991, I8a9bdcf8d3
+    Build Date                       : 12/21/17
+    OpenGL ES Shader Compiler Version: EV031.20.00.04
     Local Branch                     :
-    Remote Branch                    :
-    Remote Branch                    :
-    Reconstruct Branch               :
-05-21 18:46:55.919 18104-18262/example.com.firebasemobiletest I/OpenGLRenderer: Initialized EGL, version 1.4
-05-21 18:46:55.939 18104-18262/example.com.firebasemobiletest D/OpenGLRenderer: Enabling debug mode 0
-05-21 18:46:56.039 18104-18104/example.com.firebasemobiletest W/art: Before Android 4.1, method int android.support.v7.widget.DropDownListView.lookForSelectablePosition(int, boolean) would have incorrectly overridden the package-private method in android.widget.ListView
-05-21 18:46:56.149 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzaa]: Starting transaction: Start MutationQueue
-05-21 18:46:56.169 18104-18104/example.com.firebasemobiletest I/Timeline: Timeline: Activity_idle id: android.os.BinderProxy@6932586 time:85539928
-05-21 18:46:56.169 18104-18144/example.com.firebasemobiletest D/FA: Connected to remote service
-05-21 18:46:56.169 18104-18144/example.com.firebasemobiletest V/FA: Processing queued up service tasks: 4
-05-21 18:46:56.249 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream sending: # com.google.b.a.zzac@2634b331
-05-21 18:46:56.299 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
-        at java.net.Socket.startupSocket(Socket.java:590)
-        at java.net.Socket.<init>(Socket.java:226)
+    Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.UM.6.5.R1.08.00.00.312.040
+    Remote Branch                    : NONE
+    Reconstruct Branch               : NOTHING
+05-21 19:39:54.665 16308-16362/example.com.firebasemobiletest I/vndksupport: sphal namespace is not configured for this process. Loading /vendor/lib64/hw/gralloc.msm8953.so from the current namespace instead.
+05-21 19:39:54.673 16308-16362/example.com.firebasemobiletest I/Adreno: PFP: 0x005ff087, ME: 0x005ff063
+05-21 19:39:54.681 16308-16362/example.com.firebasemobiletest I/OpenGLRenderer: Initialized EGL, version 1.4
+05-21 19:39:54.681 16308-16362/example.com.firebasemobiletest D/OpenGLRenderer: Swap behavior 2
+05-21 19:39:54.690 16308-16360/example.com.firebasemobiletest D/NetworkSecurityConfig: No Network Security Config specified, using platform default
+05-21 19:39:54.693 16308-16360/example.com.firebasemobiletest I/ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+05-21 19:39:54.750 16308-16362/example.com.firebasemobiletest I/vndksupport: sphal namespace is not configured for this process. Loading /vendor/lib64/hw/gralloc.msm8953.so from the current namespace instead.
+05-21 19:39:54.983 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzaa]: Starting transaction: Start MutationQueue
+05-21 19:39:55.014 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzaa]: Starting transaction: Allocate query
+05-21 19:39:55.123 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (ba6a4ad) Stream sending: # com.google.b.a.zzac@2634b331
+05-21 19:39:55.195 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (ba6a4ad) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException
+        at java.net.Socket.nonNullAddress(Socket.java:424)
+        at java.net.Socket.<init>(Socket.java:248)
         at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
         at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
         at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
         at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
-        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
-        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
-        at java.lang.Thread.run(Thread.java:818)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        at java.lang.Thread.run(Thread.java:764)
     }.
-05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
-        at java.net.Socket.startupSocket(Socket.java:590)
-        at java.net.Socket.<init>(Socket.java:226)
+05-21 19:39:55.199 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (ba6a4ad) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException
+        at java.net.Socket.nonNullAddress(Socket.java:424)
+        at java.net.Socket.<init>(Socket.java:248)
         at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
         at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
         at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
         at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
-        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
-        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
-        at java.lang.Thread.run(Thread.java:818)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        at java.lang.Thread.run(Thread.java:764)
     }.
-05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [OnlineStateTracker]: Could not reach Firestore backend.
-05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzl]: Backing off for 692ms (base delay: 1000ms)
-    (0.6.6-dev) [zzaa]: Starting transaction: Release query
-05-21 18:46:56.309 18104-18104/example.com.firebasemobiletest D/MainActivity: Size: 0
-05-21 18:46:56.999 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
-        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
-        at java.net.Socket.startupSocket(Socket.java:590)
-        at java.net.Socket.<init>(Socket.java:226)
+05-21 19:39:55.200 16308-16360/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [OnlineStateTracker]: Could not reach Firestore backend.
+05-21 19:39:55.203 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzl]: Backing off for 614ms (base delay: 1000ms)
+05-21 19:39:55.204 16308-16308/example.com.firebasemobiletest D/MainActivity: Size: 0
+05-21 19:39:55.204 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzaa]: Starting transaction: Release query
+05-21 19:39:55.548 16308-16315/example.com.firebasemobiletest I/zygote64: Do partial code cache collection, code=30KB, data=22KB
+    After code cache collection, code=30KB, data=22KB
+    Increasing code cache capacity to 128KB
+05-21 19:39:55.618 16308-16368/example.com.firebasemobiletest W/zygote64: Long monitor contention with owner Measurement Worker (16356) at long com.google.android.gms.org.conscrypt.NativeCrypto.RSA_generate_key_ex(int, byte[])(:com.google.android.gms@12685025@12.6.85 (040408-197041431):-2) waiters=0 in com.google.firebase.iid.zzap com.google.firebase.iid.zzao.zzb(java.lang.String, java.lang.String, java.lang.String) for 689ms
+05-21 19:39:55.621 16308-16356/example.com.firebasemobiletest V/FA: Checking service availability
+05-21 19:39:55.623 16308-16356/example.com.firebasemobiletest V/FA: Service available
+05-21 19:39:55.624 16308-16356/example.com.firebasemobiletest V/FA: Setting useService: true
+05-21 19:39:55.630 16308-16356/example.com.firebasemobiletest V/FA: Connecting to remote service
+05-21 19:39:55.651 16308-16356/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+05-21 19:39:55.657 16308-16356/example.com.firebasemobiletest I/FA: Tag Manager is not found and thus will not be used
+05-21 19:39:55.666 16308-16356/example.com.firebasemobiletest D/FA: Logging event (FE): screen_view(_vs), Bundle[{firebase_event_origin(_o)=auto, firebase_screen_class(_sc)=MainActivity, firebase_screen_id(_si)=-6746320031365519629}]
+05-21 19:39:55.805 16308-16308/example.com.firebasemobiletest D/MainActivity: Datasnapshot DataSnapshot { key = stuff, value = {a=1, b=2} }
+05-21 19:39:55.823 16308-16360/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (ba6a4ad) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException
+        at java.net.Socket.nonNullAddress(Socket.java:424)
+        at java.net.Socket.<init>(Socket.java:248)
         at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
         at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
         at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
         at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
-        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
-        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
-        at java.lang.Thread.run(Thread.java:818)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        at java.lang.Thread.run(Thread.java:764)
     }.
-05-21 18:46:57.009 18104-18104/example.com.firebasemobiletest D/MainActivity: Datasnapshot DataSnapshot { key = stuff, value = {a=1, b=2} }
-05-21 18:47:01.269 18104-18144/example.com.firebasemobiletest V/FA: Inactivity, disconnecting from the service
+05-21 19:39:55.892 16308-16356/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+05-21 19:39:55.893 16308-16356/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+05-21 19:39:55.898 16308-16356/example.com.firebasemobiletest V/FA: Activity resumed, time: 338780593
+05-21 19:39:55.900 16308-16356/example.com.firebasemobiletest D/FA: Connected to remote service
+05-21 19:39:55.900 16308-16356/example.com.firebasemobiletest V/FA: Processing queued up service tasks: 4
+05-21 19:39:55.905 16308-16368/example.com.firebasemobiletest D/FirebaseInstanceId: topic sync succeeded
+05-21 19:40:01.036 16308-16356/example.com.firebasemobiletest V/FA: Inactivity, disconnecting from the service
+05-21 19:40:01.735 16308-16356/example.com.firebasemobiletest V/FA: Recording user engagement, ms: 7145
+05-21 19:40:01.737 16308-16356/example.com.firebasemobiletest V/FA: Connecting to remote service
+05-21 19:40:01.741 16308-16356/example.com.firebasemobiletest V/FA: Activity paused, time: 338787737
+05-21 19:40:01.752 16308-16356/example.com.firebasemobiletest D/FA: Logging event (FE): user_engagement(_e), Bundle[{firebase_event_origin(_o)=auto, engagement_time_msec(_et)=7145, firebase_screen_class(_sc)=MainActivity, firebase_screen_id(_si)=-6746320031365519629}]
+05-21 19:40:01.937 16308-16356/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+05-21 19:40:01.938 16308-16356/example.com.firebasemobiletest D/FA: Connected to remote service
+05-21 19:40:01.939 16308-16356/example.com.firebasemobiletest V/FA: Processing queued up service tasks: 2
