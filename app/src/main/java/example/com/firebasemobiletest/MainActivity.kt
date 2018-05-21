@@ -3,8 +3,12 @@ package example.com.firebasemobiletest
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.TextView
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -13,25 +17,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val db = FirebaseFirestore.getInstance()
+        val textView = findViewById<TextView>(R.id.log_textview)
 
-        db.collection("cart")
+        val firestore = FirebaseFirestore.getInstance()
+        FirebaseFirestore.setLoggingEnabled(true)
+
+        firestore.collection("cart")
                 .get()
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
 
-                        log_textview.text = "Size: ${task.result.size()}\n\n"
+                        textView.text = "Size: ${task.result.size()}\n\n"
+                        Log.d("MainActivity", "Size: ${ task.result.size() }")
 
                         for (document in task.result) {
                             Log.d("MainActivity", document.id + " => " + document.data)
-                            log_textview.text = log_textview.text.toString() + "\n" + document.id + " => " + document.data
+                            textView.text = textView.text.toString() + "\n" + document.id + " => " + document.data
                         }
                     } else {
-                        log_textview.text = "Error getting documents " + task.exception
+                        textView.text = "Error getting documents " + task.exception
                         Log.e("MainActivity", "Error getting documents.", task.exception)
                     }
                 }
 
-        // W/Firestore: (0.6.6-dev) [OnlineStateTracker]: Could not reach Firestore backend.
+        val realtime = FirebaseDatabase.getInstance()
+
+        realtime.getReference()
+                .child("stuff")
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onCancelled(p0: DatabaseError?) {
+                        Log.e("MainActivity", "Error getting value.", p0?.toException())
+                    }
+
+                    override fun onDataChange(p0: DataSnapshot?) {
+                        Log.d("MainActivity", "Datasnapshot " + p0.toString())
+                    }
+                })
+
     }
 }
