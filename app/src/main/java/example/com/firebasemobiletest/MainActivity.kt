@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
 
                         textView.text = "Size: ${task.result.size()}\n\n"
-                        Log.d("MainActivity", "Size: ${ task.result.size() }")
+                        Log.d("MainActivity", "Size: ${task.result.size()}")
 
                         for (document in task.result) {
                             Log.d("MainActivity", document.id + " => " + document.data)
@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() {
                         textView.text = "Error getting documents " + task.exception
                         Log.e("MainActivity", "Error getting documents.", task.exception)
                     }
+                }
+                .addOnFailureListener {
+                    textView.text = "Error getting documents " + it
+                    Log.e("MainActivity", "Exception getting documents", it)
                 }
 
         val realtime = FirebaseDatabase.getInstance()

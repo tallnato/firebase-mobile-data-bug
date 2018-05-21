@@ -1,0 +1,119 @@
+05-21 18:46:54.539 18104-18104/? I/art: Late-enabling -Xcheck:jni
+05-21 18:46:54.559 18104-18104/? D/TidaProvider: TidaProvider()
+05-21 18:46:55.199 18104-18104/example.com.firebasemobiletest D/FirebaseApp: com.google.firebase.auth.FirebaseAuth is not linked. Skipping initialization.
+    com.google.firebase.crash.FirebaseCrash is not linked. Skipping initialization.
+05-21 18:46:55.289 18104-18104/example.com.firebasemobiletest V/FA: Registered activity lifecycle callback
+05-21 18:46:55.349 18104-18104/example.com.firebasemobiletest I/FirebaseInitProvider: FirebaseApp initialization successful
+05-21 18:46:55.349 18104-18104/example.com.firebasemobiletest I/InstantRun: starting instant run server: is main process
+05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest V/FA: Collection enabled
+    App package, google app id: example.com.firebasemobiletest, 1:794003938984:android:c5b9c7a4182573cb
+05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest I/FA: App measurement is starting up, version: 12451
+    To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+    To enable faster debug mode event logging run:
+      adb shell setprop debug.firebase.analytics.app example.com.firebasemobiletest
+05-21 18:46:55.399 18104-18144/example.com.firebasemobiletest D/FA: Debug-level message logging enabled
+05-21 18:46:55.459 18104-18104/example.com.firebasemobiletest W/art: Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+05-21 18:46:55.489 18104-18104/example.com.firebasemobiletest V/FA: onActivityCreated
+05-21 18:46:55.539 18104-18144/example.com.firebasemobiletest V/FA: Connecting to remote service
+05-21 18:46:55.579 18104-18144/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+05-21 18:46:55.709 18104-18231/example.com.firebasemobiletest W/ResourcesManager: Asset path '/system/framework/com.android.media.remotedisplay.jar' does not exist or contains no resources.
+    Asset path '/system/framework/com.android.location.provider.jar' does not exist or contains no resources.
+05-21 18:46:55.709 18104-18104/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [Firestore]: The behavior for java.util.Date objects stored in Firestore is going to change AND YOUR APP MAY BREAK.
+    To hide this warning and ensure your app does not break, you need to add the following code to your app before calling any other Cloud Firestore methods:
+
+    FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+    FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+        .setTimestampsInSnapshotsEnabled(true)
+        .build();
+    firestore.setFirestoreSettings(settings);
+
+    With this change, timestamps stored in Cloud Firestore will be read back as com.google.firebase.Timestamp objects instead of as system java.util.Date objects. So you will also need to update code expecting a java.util.Date to instead expect a Timestamp. For example:
+
+    // Old:
+    java.util.Date date = snapshot.getDate("created_at");
+    // New:
+    Timestamp timestamp = snapshot.getTimestamp("created_at");
+    java.util.Date date = timestamp.toDate();
+
+    Please audit all existing usages of java.util.Date when you enable the new behavior. In a future release, the behavior will be changed to the new behavior, so if you do not follow these steps, YOUR APP MAY BREAK.
+05-21 18:46:55.739 18104-18231/example.com.firebasemobiletest W/linker: /data/app/com.google.android.gms-2/lib/arm64/libgmscore.so: unused DT entry: type 0x6ffffffe arg 0x1228
+    /data/app/com.google.android.gms-2/lib/arm64/libgmscore.so: unused DT entry: type 0x6fffffff arg 0x2
+05-21 18:46:55.749 18104-18231/example.com.firebasemobiletest W/linker: /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0xf arg 0x8a
+    /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0x6ffffffe arg 0x470
+    /data/app/com.google.android.gms-2/lib/arm64/libconscrypt_gmscore_jni.so: unused DT entry: type 0x6fffffff arg 0x1
+05-21 18:46:55.749 18104-18231/example.com.firebasemobiletest V/NativeCrypto: Registering com/google/android/gms/org/conscrypt/NativeCrypto's 280 native methods...
+05-21 18:46:55.769 18104-18231/example.com.firebasemobiletest I/art: Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java7ExtendedSSLSession>
+    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java7ExtendedSSLSession>
+    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java8ExtendedSSLSession>
+    Rejecting re-init on previously-failed class java.lang.Class<com.google.android.gms.org.conscrypt.Java8ExtendedSSLSession>
+05-21 18:46:55.789 18104-18231/example.com.firebasemobiletest I/ProviderInstaller: Installed default security provider GmsCore_OpenSSL
+05-21 18:46:55.809 18104-18250/example.com.firebasemobiletest I/DynamiteModule: Considering local module com.google.android.gms.firebase_database:4 and remote module com.google.android.gms.firebase_database:6
+    Selected remote version of com.google.android.gms.firebase_database, version >= 6
+05-21 18:46:55.819 18104-18144/example.com.firebasemobiletest I/FA: Tag Manager is not found and thus will not be used
+05-21 18:46:55.839 18104-18144/example.com.firebasemobiletest D/FA: Logging event (FE): screen_view(_vs), Bundle[{firebase_event_origin(_o)=auto, firebase_screen_class(_sc)=MainActivity, firebase_screen_id(_si)=-3884067056578955392}]
+05-21 18:46:55.849 18104-18262/example.com.firebasemobiletest D/OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+05-21 18:46:55.859 18104-18104/example.com.firebasemobiletest D/Atlas: Validating map...
+05-21 18:46:55.859 18104-18104/example.com.firebasemobiletest D/ActivityThreadInjector: clearCachedDrawables.
+05-21 18:46:55.889 18104-18144/example.com.firebasemobiletest V/FA: Connection attempt already in progress
+    Connection attempt already in progress
+05-21 18:46:55.889 18104-18144/example.com.firebasemobiletest V/FA: Activity resumed, time: 231726764
+05-21 18:46:55.899 18104-18262/example.com.firebasemobiletest I/Adreno: QUALCOMM build                   : 5a2e917, Iae42b9ed90
+    Build Date                       : 03/28/16
+    OpenGL ES Shader Compiler Version: E031.25.03.09
+    Local Branch                     :
+    Remote Branch                    :
+    Remote Branch                    :
+    Reconstruct Branch               :
+05-21 18:46:55.919 18104-18262/example.com.firebasemobiletest I/OpenGLRenderer: Initialized EGL, version 1.4
+05-21 18:46:55.939 18104-18262/example.com.firebasemobiletest D/OpenGLRenderer: Enabling debug mode 0
+05-21 18:46:56.039 18104-18104/example.com.firebasemobiletest W/art: Before Android 4.1, method int android.support.v7.widget.DropDownListView.lookForSelectablePosition(int, boolean) would have incorrectly overridden the package-private method in android.widget.ListView
+05-21 18:46:56.149 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzaa]: Starting transaction: Start MutationQueue
+05-21 18:46:56.169 18104-18104/example.com.firebasemobiletest I/Timeline: Timeline: Activity_idle id: android.os.BinderProxy@6932586 time:85539928
+05-21 18:46:56.169 18104-18144/example.com.firebasemobiletest D/FA: Connected to remote service
+05-21 18:46:56.169 18104-18144/example.com.firebasemobiletest V/FA: Processing queued up service tasks: 4
+05-21 18:46:56.249 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream sending: # com.google.b.a.zzac@2634b331
+05-21 18:46:56.299 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
+        at java.net.Socket.startupSocket(Socket.java:590)
+        at java.net.Socket.<init>(Socket.java:226)
+        at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
+        at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
+        at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
+        at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+        at java.lang.Thread.run(Thread.java:818)
+    }.
+05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
+        at java.net.Socket.startupSocket(Socket.java:590)
+        at java.net.Socket.<init>(Socket.java:226)
+        at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
+        at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
+        at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
+        at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+        at java.lang.Thread.run(Thread.java:818)
+    }.
+05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest W/Firestore: (0.6.6-dev) [OnlineStateTracker]: Could not reach Firestore backend.
+05-21 18:46:56.309 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzl]: Backing off for 692ms (base delay: 1000ms)
+    (0.6.6-dev) [zzaa]: Starting transaction: Release query
+05-21 18:46:56.309 18104-18104/example.com.firebasemobiletest D/MainActivity: Size: 0
+05-21 18:46:56.999 18104-18231/example.com.firebasemobiletest I/Firestore: (0.6.6-dev) [zzv]: (60e2b1a) Stream closed with status: Status{code=UNAVAILABLE, description=null, cause=java.lang.NullPointerException: Attempt to invoke virtual method 'boolean java.net.InetAddress.isAnyLocalAddress()' on a null object reference
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:179)
+        at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:163)
+        at java.net.Socket.startupSocket(Socket.java:590)
+        at java.net.Socket.<init>(Socket.java:226)
+        at io.grpc.okhttp.OkHttpClientTransport.createHttpProxySocket(OkHttpClientTransport.java:475)
+        at io.grpc.okhttp.OkHttpClientTransport.access$1400(OkHttpClientTransport.java:91)
+        at io.grpc.okhttp.OkHttpClientTransport$1.run(OkHttpClientTransport.java:425)
+        at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+        at java.lang.Thread.run(Thread.java:818)
+    }.
+05-21 18:46:57.009 18104-18104/example.com.firebasemobiletest D/MainActivity: Datasnapshot DataSnapshot { key = stuff, value = {a=1, b=2} }
+05-21 18:47:01.269 18104-18144/example.com.firebasemobiletest V/FA: Inactivity, disconnecting from the service
